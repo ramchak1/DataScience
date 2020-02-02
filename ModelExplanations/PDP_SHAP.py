@@ -44,9 +44,10 @@ class DataFrameImputer(TransformerMixin):
 
 #Load the dataset:
 
-path_to_dataset='/Users/ramcharankakarla/Downloads/Churn_Modelling.csv'
+path_to_dataset='/Users/XXXXX/Downloads/Churn_Modelling.csv'
 target_variable='Exited'
 colums_to_ignore=['RowNumber','CustomerId','Surname']
+interactions_2way=['Age', 'CreditScore']
 
 #Finalize the variables
 df=pd.read_csv(path_to_dataset)
@@ -110,15 +111,15 @@ for _ in X.columns.tolist():
     )
 
 fig, axes, summary_df = info_plots.actual_plot_interact(
-    model=baseline, X=df[X.columns], features=['Age', 'CreditScore'], feature_names=['Age', 'CreditScore']
+    model=baseline, X=df[X.columns], features=interactions_2way, feature_names=interactions_2way
 )
 
 #PDP Plot : Grid Plot
 interactions = pdp.pdp_interact(
-    model=baseline, dataset=df, model_features=X.columns, features=['Age', 'CreditScore']
+    model=baseline, dataset=df, model_features=X.columns, features=interactions_2way
 )
 
-fig, axes = pdp.pdp_interact_plot(interactions, ['Age', 'CreditScore'], plot_type='grid', x_quantile=True, plot_pdp=False)
+fig, axes = pdp.pdp_interact_plot(interactions,interactions_2way , plot_type='grid', x_quantile=True, plot_pdp=False)
 
 
 #SHAP
