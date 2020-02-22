@@ -1,12 +1,15 @@
 ## End to End Predictive modeling pipeline in Pyspark ##
 
 **What is End to End Predictive modeling pipeline?**
+
 This is a tool that can take in a data with a binary target and can produce predictive modeling results using minimal interference. This tool is built in pyspark 2.4 and python 3.5
 
 **What is its main purpose?**
+
 This tool enables quick iterations of the predictive models with all the necessary stats to quicken the process of the model building. 
 
 **Who can use it?**
+
 It is a general purpose code that can be modified to individual's preference. If you are not into data science, please make sure to go through the results diligently before making any decisions.
 I am open to colloborating with any data science enthusiasts to make this pipeline even better. I can be contacted at ramcharan.kakarla@okstate.edu
 
@@ -14,6 +17,7 @@ I am open to colloborating with any data science enthusiasts to make this pipeli
 
 
 **What do I need to run this tool?**
+
 1. Dataset in distributed environment
 2. This version currently supports binary targets
 3. tested on Pyspark 2.4 and Python 3.5
