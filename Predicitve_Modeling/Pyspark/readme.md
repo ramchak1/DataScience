@@ -11,10 +11,14 @@ It is a general purpose code that can be modified to individual's preference. If
 I am open to colloborating with any data science enthusiasts to make this pipeline even better. I can be contacted at ramcharan.kakarla@okstate.edu
 
 
+
+
 **What do I need to run this tool?**
 1. Dataset in distributed environment
 2. This version currently supports binary targets
 3. tested on Pyspark 2.4 and Python 3.5
+
+
 
 **Expected Inputs:**
 1. Dataset name
@@ -22,6 +26,8 @@ I am open to colloborating with any data science enthusiasts to make this pipeli
 3. Variable patterns that you would like to exclude from modeling
 4. Variables you would like to exclude from modeling
 5. Acceptable threshold (number of levels) of categorical variable
+
+
 
 **Expected Outputs:**
 
@@ -43,12 +49,16 @@ I am open to colloborating with any data science enthusiasts to make this pipeli
 
 
 **Other FAQs:**
+
+
 **How are missing values handled:**
+
 Numeric with mean and categorical with mode. If there are any categorical variables with mode missing, tool overwrites with value 'Unknown value'
 
 **Is this the best model:**
+
 No, this is a baseline model. Idea is to give a quick glace of what is a ball park metric of what can be achieved
 
 
-For any other questions/feedback please reach out to me at ramcharan.kakarl@okstate.edu
+For any other questions/feedback please reach out to me at ramcharan.kakarla@okstate.edu
  
