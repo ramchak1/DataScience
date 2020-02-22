@@ -72,6 +72,9 @@ exclude_list=['Surname']
 #Maximum level of distinct levels allowable for categorical values
 distinct_threshold=20
 
+#Name of the excel output
+excel_output='business_iteration1'
+
 #Reading the table
 df=spark.sql("select * from "+input_table)
 
@@ -421,7 +424,7 @@ Other_Stats=Other_Stats[['Algorithms','Train_Precision','Test_Precision','Train_
 ks_all=pd.concat([logistic_train_ks_tab,logistic_test_ks_tab,mlp_train_ks_tab,mlp_test_ks_tab,rf_train_ks_tab,rf_test_ks_tab, GBT_train_ks_tab,GBT_test_ks_tab])
 
 
-path = r"/FileStore/tables/test_metrics.xlsx"
+path = r"/FileStore/tables/"+excel_output+".xlsx"
 writer = pd.ExcelWriter(path, engine = 'xlsxwriter')
 df_stats.to_excel(writer,sheet_name='Summary_Stats',index=False)
 Top_Variables.to_excel(writer,sheet_name='Top_Vars',index=False)
