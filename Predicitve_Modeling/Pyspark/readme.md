@@ -30,6 +30,7 @@ I am open to colloborating with any data science enthusiasts to make this pipeli
 3. Variable patterns that you would like to exclude from modeling
 4. Variables you would like to exclude from modeling
 5. Acceptable threshold (number of levels) of categorical variable
+6. Excel file name for the output
 
 
 
