@@ -361,7 +361,7 @@ predict_test.unpersist()
 #Gradient Boosting
 stages_tree_gbt=[]
 gbt = GBTClassifier(featuresCol = 'features', labelCol = 'label',maxIter=15)
-stages_tree_gbt += [classifier]
+stages_tree_gbt += [gbt]
 pipeline_tree_gbt=Pipeline(stages=stages_tree_gbt)
 print('Running GBT')
 GBT_Model = pipeline_tree_gbt.fit(train)
